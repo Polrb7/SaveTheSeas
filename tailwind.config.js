@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         "custom-blue": "#4B86B4",
         textColor: "#EDF6F9",
+        "sts-dark-blue": "#2A4D69",
+        "sts-sky-blue": "#ADCBE3",
+        "sts-blue": "#43A8EC",
+        "sts-white": "#E7EFF6",
       },
     },
   },
