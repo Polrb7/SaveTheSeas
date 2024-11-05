@@ -15,7 +15,6 @@ export default defineConfig({
         login: path.resolve(__dirname, "html/login.html"),
         Merch: path.resolve(__dirname, "html/Merch.html"),
         Product: path.resolve(__dirname, "html/Product.html"),
-        login: path.resolve(__dirname, "src/pages/login.html"),
         News: path.resolve(__dirname, "html/News.html"),
         register: path.resolve(__dirname, "html/register.html"),
         WhatWeDo: path.resolve(__dirname, "html/WhatWeDo.html"),
