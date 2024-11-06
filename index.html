@@ -7,19 +7,19 @@
     <link href="/style.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="h-14 content-center bg-blue-400 text-white font-semibold">
-      <div class="flex justify-between items-center px-5">
+    <nav class="relative h-14 bg-blue-400 text-white font-semibold z-20">
+      <div class="flex justify-between items-center px-5 h-full">
         <div class="flex items-center">
           <a href="./index.html">
             <img
               src="./img/LogoSaveTheSeas.png"
-              height="80px"
-              width="100px"
+              class="h-10 w-12"
               alt="Logo SaveTheSeas"
             />
           </a>
         </div>
-        <div class="md:flex space-x-5">
+
+        <div class="hidden md:flex space-x-5">
           <a class="hover:text-lg" href="./html/AboutUs.html">About Us</a>
           <a class="hover:text-lg" href="./html/WhatWeDo.html">What we do</a>
           <a class="hover:text-lg" href="./html/Gallery.html">Gallery</a>
@@ -27,22 +27,69 @@
           <a class="hover:text-lg" href="./html/JoinUs.html">Join Us</a>
           <a class="hover:text-lg" href="./html/News.html">News</a>
         </div>
-        <div class="flex items-center space-x-2">
+
+        <div class="hidden md:flex items-center space-x-2">
           <a href="">
             <img class="w-10 h-10" src="img/profile-circle.png" alt="Profile" />
           </a>
           <a href="./html/login.html" class="hover:text-lg">Log Out</a>
         </div>
+
+        <button
+          id="menuButton"
+          class="md:hidden flex items-center focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden absolute w-full top-14 flex-col text-center bg-blue-400 text-white px-5 py-3 space-y-2 md:hidden z-10"
+      >
+        <a class="hover:text-lg block" href="./html/AboutUs.html">About Us</a>
+        <a class="hover:text-lg block" href="./html/WhatWeDo.html"
+          >What we do</a
+        >
+        <a class="hover:text-lg block" href="./html/Gallery.html">Gallery</a>
+        <a class="hover:text-lg block" href="./html/Merch.html">Merch</a>
+        <a class="hover:text-lg block" href="./html/JoinUs.html">Join Us</a>
+        <a class="hover:text-lg block" href="./html/News.html">News</a>
+        <a class="hover:text-lg block" href="#">Profile</a>
+        <a href="./html/login.html" class="hover:text-lg block">Log Out</a>
       </div>
     </nav>
+
     <main>
       <div class="">
         <img
-          class="mt-5 w-full h-96"
+          class="my-7 w-auto h-auto md:w-full md:h-96"
           src="img/img-index.jpg"
-          alt="Foquita traped in plastics"
+          alt="Foquita trapped in plastics"
         />
       </div>
     </main>
+
+    <script>
+      document
+        .getElementById("menuButton")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          mobileMenu.classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
